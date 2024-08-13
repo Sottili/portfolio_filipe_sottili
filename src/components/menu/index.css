@@ -1,0 +1,5 @@
+.openMenu {
+  display: flex !important;
+  height: 100vh !important;
+  transition: 1s;
+}
