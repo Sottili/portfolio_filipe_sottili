@@ -1,9 +1,12 @@
 "use client";
 
-import Link from "next/link";
-import { styled } from "styled-components";
-import { FaBars } from "react-icons/fa";
 import { useState } from "react";
+import Link from "next/link";
+
+import { styled } from "styled-components";
+
+import { FaBars } from "react-icons/fa";
+
 import "./index.css";
 
 const HeaderContainer = styled.header`
@@ -14,6 +17,7 @@ const HeaderContainer = styled.header`
   padding: 20px 30px;
   @media (max-width: 900px) {
     padding: 10px 0px;
+    transition: 1s;
   }
 `;
 
