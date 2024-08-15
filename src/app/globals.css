@@ -1,6 +1,7 @@
 :root {
+  --pink-primary: #f6a6f8;
   --purple-primary: #5a189a;
-  --purple-secundary: #4f158a;
+  --purple-secondary: #4f158a;
 }
 
 * {

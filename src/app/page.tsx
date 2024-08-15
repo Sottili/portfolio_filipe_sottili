@@ -3,10 +3,15 @@
 // Imported Components
 import Menu from "@/components/menu/menu";
 
+// Icons
+import { IoCodeSlash } from "react-icons/io5";
+import { SiMinutemailer } from "react-icons/si";
+import { BsFillTelephoneFill } from "react-icons/bs";
+
 // Components Styles
 import {
   MainAplicationContainer,
-  MyProjectsTitle,
+  SectionTitle,
   AboutSection,
   TitleAndIcons,
   TitlePrimary,
@@ -15,6 +20,9 @@ import {
   ContainerTextAbout,
   IconsAbout,
   ProjectsSection,
+  ContactSection,
+  TitleContact,
+  SectionContactTitle,
 } from "./styles";
 
 // Icons
@@ -27,7 +35,7 @@ export default function Home() {
       <Menu />
       <MainAplicationContainer>
         {/* About Section */}
-        <AboutSection id="about">
+        <AboutSection>
           <TitleAndIcons>
             <TitlePrimary>JUNIOR DEVELOPER</TitlePrimary>
             <IconsAbout>
@@ -57,7 +65,11 @@ export default function Home() {
                   }}
                 />
               </a>
-              <a style={{ color: "#fff" }} href="#" target="_blank">
+              <a
+                style={{ color: "#fff" }}
+                href="https://docs.google.com/document/d/15baVEJSmBtgiOWrYXADFWIokyNYn-y26/edit?usp=sharing&ouid=100187131871817709103&rtpof=true&sd=true"
+                target="_blank"
+              >
                 <BsFiletypeDoc
                   style={{
                     marginLeft: "10px",
@@ -76,6 +88,7 @@ export default function Home() {
               <SpanTextAbout>React, </SpanTextAbout>
               <SpanTextAbout>Typescript, </SpanTextAbout>
               <SpanTextAbout>NextJS, </SpanTextAbout>
+              <SpanTextAbout>TailwindCSS, </SpanTextAbout>
               <SpanTextAbout>Node, </SpanTextAbout>
               <SpanTextAbout>Express, </SpanTextAbout>
               <SpanTextAbout>NestJS, </SpanTextAbout>
@@ -93,11 +106,48 @@ export default function Home() {
           </ContainerTextAbout>
         </AboutSection>
         {/* Projects Section */}
-        <MyProjectsTitle>Projetos</MyProjectsTitle>
-        <ProjectsSection id="projects">
+        <SectionTitle id="projects">
+          <IoCodeSlash
+            style={{
+              verticalAlign: "middle",
+              marginRight: "8px",
+              width: "25px",
+              color: "var(--pink-primary)",
+            }}
+          />
+          Projetos
+        </SectionTitle>
+        <ProjectsSection>
           <CardProjects />
         </ProjectsSection>
         {/* Qualifications Section */}
+        <ContactSection>
+          <SectionContactTitle id="contact">
+            Entre em Contato
+          </SectionContactTitle>
+          <TitleContact>
+            <SiMinutemailer
+              style={{
+                verticalAlign: "middle",
+                marginRight: "8px",
+                width: "20px",
+                color: "var(--pink-primary)",
+              }}
+            />
+            Email: felipesottili32@gmail.com
+          </TitleContact>
+          <TitleContact>
+            <BsFillTelephoneFill
+              style={{
+                verticalAlign: "middle",
+                marginRight: "8px",
+                width: "14px",
+                color: "var(--pink-primary)",
+              }}
+            />
+            Telefone: (11) 94857-7665
+          </TitleContact>
+        </ContactSection>
       </MainAplicationContainer>
     </>
   );

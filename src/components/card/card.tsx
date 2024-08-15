@@ -51,7 +51,7 @@ const BtnGithub = styled.a`
 export const CardProjects = () => {
   return (
     <>
-      <CardContainer style={{ height: "700px" }}>
+      <CardContainer style={{ height: "695px" }}>
         <CardBody>
           <div style={{ margin: "0 auto" }}>
             <Image
@@ -124,7 +124,7 @@ export const CardProjects = () => {
           </BtnGithub>
         </CardBody>
       </CardContainer>
-      <CardContainer style={{ height: "610px" }}>
+      <CardContainer style={{ height: "605px" }}>
         <CardBody>
           <div style={{ margin: "10px auto" }}>
             <Image
@@ -154,7 +154,7 @@ export const CardProjects = () => {
           </BtnGithub>
         </CardBody>
       </CardContainer>
-      <CardContainer style={{ height: "650px" }}>
+      <CardContainer style={{ height: "645px" }}>
         <CardBody>
           <div style={{ margin: "10px auto" }}>
             <Image src={logoCoffe} alt="Logo Lua Station" height={75} />

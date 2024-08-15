@@ -4,7 +4,7 @@ import { Poppins } from "next/font/google";
 const poppins = Poppins({ subsets: ["latin"], weight: "300" });
 
 export const metadata = {
-  title: "Filipe Sottili",
+  title: "Filipe Sottili - Dev",
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body className={poppins.className}>{children}</body>
     </html>
   );

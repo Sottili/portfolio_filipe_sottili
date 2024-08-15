@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 
 import { styled } from "styled-components";
@@ -9,15 +9,14 @@ import { FaBars } from "react-icons/fa";
 
 import "./index.css";
 
-const HeaderContainer = styled.header`
+const NavbarContainer = styled.nav`
   height: 50px;
-  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 20px 30px;
   @media (max-width: 900px) {
     padding: 10px 0px;
-    transition: 1s;
+    transition: 0.5s;
   }
 `;
 
@@ -28,6 +27,7 @@ const ListHeader = styled.ul`
     flex-direction: column;
     width: 100%;
     padding: 20px 10px;
+    margin-top: 10px;
     display: none;
     transition: 1s;
   }
@@ -57,7 +57,7 @@ const TitleHeader = styled(Link)`
   cursor: pointer;
   text-decoration: none;
   color: #fff;
-  transition: 0.3s;
+  transition: 1s;
   letter-spacing: 2px;
   &:hover {
     transition: 0.3s;
@@ -89,15 +89,14 @@ export default function Menu() {
   };
 
   return (
-    <HeaderContainer className={active ? "openMenu" : ""}>
+    <NavbarContainer id="about" className={active ? "openMenu" : ""}>
       <TitleHeader href="#inicio">Filipe Sottili</TitleHeader>
       <ListHeader className={active ? "openMenu" : ""}>
         <ItemsListHeader href="#about">Inicio</ItemsListHeader>
         <ItemsListHeader href="#projects">Projetos</ItemsListHeader>
-        <ItemsListHeader href="#qualifications">Qualificações</ItemsListHeader>
         <ItemsListHeader href="#contact">Contato</ItemsListHeader>
       </ListHeader>
       <ToggleBtn onClick={openCloseMenu} />
-    </HeaderContainer>
+    </NavbarContainer>
   );
 }
